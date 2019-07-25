@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            font-family: "Source Sans Pro", SourceSansPro, Source_Sans_Pro, ArialSystem, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+            font-size:  14px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #E9E7E7;
+        }
+
+        img {
+            image-rendering: pixelated;
+        }
+
+        .navlogo {
+            display: inline-block;
+            padding-top: 15px;
+            padding-bottom: 12px;
+            margin-left: 3px;
+            width: 100px;
+        }
+        .container {
+            margin: 40px;
+            width: 600px;
+        }
+        .fritekst {
+            font-size:  14px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img class="navlogo" alt="Navlogo" src="Navlogo.png"/>
+        <h1>Notat av {{dato}}</h1>
+    </div>
+    <table id="notat">
+        <tr>
+            <th colspan="3">Saksnr: {{saksnummer}}</th>
+        </tr>
+        <tr>
+            <td><strong>HVEM<br/> saken gjelder</strong></td>
+            <td>Navn: <br/>{{brukersNavn}}</td>
+            <td>Fødselsnummer:<br/>{{brukersFnr}}</td>
+        </tr>
+        <tr>
+            <td><strong>Saksbehandler(e)</strong></td>
+            <td>Navn:<br/> {{saksbehandler}}</td>
+            <td>Enhet: <br/>{{enhet}}</td>
+        </tr>
+        <tr>
+            <td>Saken gjelder:</td>
+            <td colspan="2">{{tittel}}</td>
+        </tr>
+    </table>
+
+    <div class="fritekst">
+        <p>{{{tekst}}}</p>
+    </div>
+</div>
+</body>
+</html>
